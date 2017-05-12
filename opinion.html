@@ -76,8 +76,7 @@
               <a class="black-text" href="index.html">
                 <i class="fa fa-home fa-2x  " aria-hidden="true"></i>Inicio
               </a>
-            </li>
-            
+            </li>            
             <!-- Dropdown Trigger Menú-->
             <li>                           
               <a class="dropdown-button black-text" href="#!" data-activates="menu1">
@@ -90,20 +89,12 @@
                 <i class="fa fa-user fa-2x  " aria-hidden="true"></i>Contacto
               </a>
             </li>
+            <!--Seción de Comentarios, elemento del menú: Danos tu opinión-->
             <li>
               <a class="black-text" href="opinion.html" class="center waves-red">
                 <i class="fa fa-commenting  black-text fa-2x " aria-hidden="true"></i> Danos tu opinión
               </a>
-            </li>
-            <!---<li>
-              <a class="black-text" href="chat.html" class="center waves-red">
-                <i class="fa fa-comments fa-2x black-text" aria-hidden="true"></i>Chat
-              </a>
-            </li>-->
-            <!--<li>
-             <a class="black-text" href="javascript:signUpWithGoogle(this);">
-              <i class="fa fa-user-circle-o black-text fa-2x " aria-hidden="true"></i>Log in</a>
-            </li>-->
+            </li>           
             <li>
               <a class="black-text" href="guia.html">
                 <i class="fa fa-question fa-2x " aria-hidden="true"></i>Guía
@@ -136,16 +127,7 @@
               <a class="black-text" href="opinion.html" class="center waves-red">
                 <i class="fa fa-commenting  black-text" aria-hidden="true"></i>Danos tu opinión 
               </a>
-            </li>
-            <!--<li>
-              <a class="black-text" href="chat.html" class="center waves-red">
-                <i class="fa fa-comments black-text" aria-hidden="true"></i>Chat
-              </a>
-            </li>-->
-            <!--<li>
-             <a class="black-text" href="">
-              <i class="fa fa-user-circle-o black-text" aria-hidden="true"></i>Log in</a>
-            </li>-->
+            </li>           
             <li>
               <a class="black-text" href="guia.html" class="center waves-red">
                 <i class="fa fa-question  black-text" aria-hidden="true"></i>Guía
@@ -156,39 +138,49 @@
       </nav>
     </div>
     <div class="row"></div>
+    <!--Sección de comentarios: contenedores principal-->
     <div class="row container" >
-       <!-- <button class="btn deep-orange lighten-1 waves-effect waves-light waves-green">LOG IN<i class="fa fa-sign-in" aria-hidden="true"></i>
-        </button>
-         <button class="btn deep-orange lighten-1 waves-effect waves-light waves-green">LOG OUT<i class="fa fa-sign-out" aria-hidden="true"></i>
-        </button>-->
       <div class="col l12 m12 s12 container yellow lighten-4" id="seccionComentarios">
+        <!--Título de la sección que contendra al formulario-->
         <div class="row">
           <h5 class="center" id="encabezadoComentarios"> Tú opinión nos importa</h5>         
         </div>
+        <!--Opción de inicio de sesión con Google-->
         <div class="row center">
+          <!--Icono de google-->
           <i class="fa fa-google-plus-official fa-2x red-text" aria-hidden="true"></i> 
+          <!--Link de enlace hacia la selección de la cuenta de google con la que el usuario iniciara sesión-->
           <a class="black-text" id="textoSesion"></a>
+          <!--Icono de mano para señalar al usuario donde debe hacer click para iniciar sesión con Google-->
           <i class="fa fa-hand-o-left red-text" aria-hidden="true"></i>
         </div>
-        <div class="row container col l12 m12 s12">          
+        <!--Contenedor para el formulario-->
+        <div class="row container col l12 m12 s12"> 
+          <!--Formulario de comentarios, los campos de nombre de usuario y comentario son requeridos 
+          obligatoriamente-->         
           <form class="row card-panel" id="formComments">
+            <!--Nombre completo del usuario mediante una entrada de texto-->
             <div class="input-field col l12 m12 s12"> 
               <i class="fa fa-user-circle-o prefix" aria-hidden="true"></i>
-              <input type="text" id="name" placeholder="Nombre" class="validate" value="Anónimo" />
+              <input type="text" id="name" placeholder="Nombre" class="validate" value="Anónimo" required="" />
               <label for="name">Nombre Completo</label>
             </div>
+            <!--Comentario del usuario mediante un textarea-->
             <div class="input-field col l12 m12 s12">
               <i class="fa fa-commenting-o prefix" aria-hidden="true"></i>
-              <textarea id="comment" rows="3" cols="30" placeholder="Escribe tu comentario aquí" class="materialize-textarea validate"></textarea>
+              <textarea id="comment" rows="3" cols="30" placeholder="Escribe tu comentario aquí" class="materialize-textarea validate" required=""></textarea>
               <label for="comment">Comentario</label>
             </div >
+            <!--Botón de Comentar-->
             <div class="col l12 m12 s12  center-align">              
               <button type="submit"  onclick="postComment();" class="btn deep-orange lighten-1 waves-effect waves-light waves-green">Comentar
                 <i class="fa fa-envelope left" aria-hidden="true"></i></button>
             </div>            
           </form>  
         </div>
+        <!--Sección de historial de comentarios: aquí apareceran el historial de comentarios que los usuarios han hecho-->
         <div class="row col l12 m12 s12" id="historialComments">
+          <!--Título de la sección-->
           <h5 class="flow-text">Comentarios</h5>
           <div id="comments">
           </div>
