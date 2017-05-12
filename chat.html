@@ -1,0 +1,242 @@
+<<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='images/iconpage.png' rel='shortcut icon' type='image/png'>
+
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    
+    <!-- Add to homescreen for Chrome on Android 
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Friendly Chat">
+    <meta name="theme-color" content="">
+    -->
+    <!-- Add to homescreen for Safari on iOS 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Friendly Chat">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
+    -->
+
+    <!-- Tile icon for Win8 
+    <meta name="msapplication-TileColor" content="#3372DF">
+    <meta name="msapplication-navbutton-color" content="#303F9F">
+    -->
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <!-- App Styling -->
+    <link href="https://fonts.googleapis.com/css?family=Amita|Handlee|Caveat+Brush|Gochi+Hand|Itim|Merienda|Sofia|Libre+Baskerville|Lobster+Two" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="materialize/css/pgwslider.min.css">
+    <link rel="stylesheet" href="materialize/css/estiloheader.css">
+    <link rel="stylesheet" href="materialize/css/estilos.css">
+
+    <title>Mamma Mia Restarurant</title>
+  </head>
+<body>
+  <!--Descripción del Proyecto-->
+  <!-- Aplicación Web de un restaurante que muestra un menú de comidas a elegir por el usuario. La carta de los platillos a elegir esta dividida en desayuno, comida y cena, los cuales contienen una entrada, un plato fuerte y un postre, acompañados de una bebida; los platillos los puede escoger el usuario mediante la selección de elementos de listas donde se despligan los nombres de las entradas, platos fuertes, postres y bebidas de cada sección-->   
+  <body class="white">
+    <!--Barra de navegación del Restaurante-->
+    <ul id="menu1" class="dropdown-content">
+      <li>
+        <a class="black-text" href="desayuno.html">
+          <img src="images/iconos/coffe.png" class="icon">
+          Desayuno
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="comida.html">
+          <img src="images/iconos/plato.png" class="icon1">Comida
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="cena.html">
+          <img src="images/iconos/botella.png" class="icon">Cena
+        </a>
+      </li>
+    </ul>
+     <ul id="menu2" class="dropdown-content">
+      <li>
+        <a class="black-text" href="desayuno.html">
+          <img src="images/iconos/coffe.png" class="icon">Desayuno
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="comida.html">
+          <img src="images/iconos/plato.png" class="icon1">Comida
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="cena.html">
+          <img src="images/iconos/botella.png" class="icon">Cena
+        </a>
+      </li>
+    </ul>
+    <div id="navbar">
+      <nav class="col l12">
+        <div class="nav-wrapper z-depth-5  yellow lighten-4"> 
+          <!---Logo del restaurante: vista de escritorio  con la clase hide-on-med-and-down-->       
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-med-and-down" id="logo">
+          <!--Logo del restaurante: vista móvil con la clase hide-on-med-and-up-->
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-med-and-up" id="logo2">
+          <!--Logo del restaurante: vista tablet con las clases hide-on-small-only hide-on-large-only-->
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-small-only hide-on-large-only" 
+          id="logo3">
+          <!-- Titulo: vista de escritorio-->
+          <a href="#" class="brand-logo flow-text black-text hide-on-med-and-down" id="titulonavbar">Restaurant</a>
+          <!--Icono de hamburguesa-->
+          <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="fa fa-bars fa-2x black-text" aria-hidden="true"></i>
+          </a>
+              
+          <!--Elemento del menú de barra de navegación: vista de escritorio-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a class="black-text" href="index.html">
+                <i class="fa fa-home fa-2x" aria-hidden="true"></i>Inicio
+              </a>
+            </li>
+            
+            <!-- Dropdown Trigger Menú-->
+            <li>                           
+              <a class="dropdown-button black-text" href="#!" data-activates="menu1">
+                <i class="fa fa-cutlery fa-2x black-text prefix" aria-hidden="true"></i>Menú
+                <i class="fa fa-chevron-circle-down fa-2x right" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="contacto.html">
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i>Contacto
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="opinion.html" class="center waves-red">
+                <i class="fa fa-commenting fa-2x black-text" aria-hidden="true"></i>Danos tu opinión
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="chat.html" class="center waves-red">
+                <i class="fa fa-comments fa-2x black-text" aria-hidden="true"></i>Chat
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="guia.html">
+                <i class="fa fa-question fa-2x" aria-hidden="true"></i>Guía
+              </a>
+            </li>
+          </ul>
+          <!--Elementos del menú de navegación: vista tablet y móvil-->
+          <ul class="side-nav yellow lighten-4" id="mobile-demo">
+            <li>
+            <div class="userView">
+              <div class="col s12">
+                  <img src="images/logo3-1.png" width="275" height="110">
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="black-text" href="index.html">
+                <i class="fa fa-home  black-text center" aria-hidden="true"></i>Inicio
+              </a>
+            </li>
+            <li>                           
+              <a class="dropdown-button black-text" href="#!" data-activates="menu2"><i class="fa fa-cutlery  black-text prefix" aria-hidden="true"></i>Menú<i class="fa fa-chevron-circle-down right black-text" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a class="black-text" href="contacto.html" class="center waves-red">
+                <i class="fa fa-user  black-text" aria-hidden="true"></i> Contacto
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="opinion.html" class="center waves-red">
+                <i class="fa fa-commenting  black-text" aria-hidden="true"></i>Danos tu opinión
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="chat.html" class="center waves-red">
+                <i class="fa fa-comments black-text" aria-hidden="true"></i>Chat
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="guia.html" class="center waves-red">
+                <i class="fa fa-question  black-text" aria-hidden="true"></i>Guía
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="demo-layout mdl-layout mdl-layout--fixed-header">
+       <!-- Header section containing logo -->
+       <header class="mdl-layout__header white-text deep-orange lighten-1">
+       <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+         <div id="user-container">
+           <div hidden id="user-pic"></div>
+           <div hidden id="user-name"></div>
+           <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+             Sign-out
+           </button>
+           <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+             <i class="material-icons">account_circle</i>Sign-in with Google
+           </button>
+         </div>
+       </div>
+       </header>
+      
+       <main class="mdl-layout__content yellow lighten-5">
+        <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
+          <!-- Messages container -->
+          <div id="messages-card" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              <div id="messages">
+                <span id="message-filler"></span>
+              </div>
+
+              <form id="message-form" action="#">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="message">
+                  <label class="mdl-textfield__label" for="message">Mensaje</label>
+                </div>
+                <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                  Enviar
+                </button>
+              </form>
+              
+              <form id="image-form" action="#">
+                <input id="mediaCapture" type="file" accept="image/*,capture=camera">
+                <button id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--amber-400 mdl-color-text--white">
+                  <i class="material-icons">image</i>
+                </button>
+              </form>
+            </div>
+          </div>
+         
+          <div id="must-signin-snackbar" class="mdl-js-snackbar mdl-snackbar">
+            <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+          </div>
+         
+         </div>
+       </main>
+      </div>
+    </div>
+    <script src="/__/firebase/3.8.0/firebase.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
