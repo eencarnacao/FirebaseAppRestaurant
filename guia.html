@@ -187,9 +187,17 @@
         </div>
       </nav>
     </div>
-    
+    <div class="row"></div>
     <div class="row center col l8 m10 s12" id="pdfcontainer">
-
+    <div class="center hide-on-small-only hide-on-med-only">
+      <embed src="reporte_seccion_comentarios.pdf" width="70%" height="600" href="reporte.pdf"></embed>          
+    </div>
+    <div class="center hide-on-small-only hide-on-large-only">
+      <embed src="reporte_seccion_comentarios.pdf" width="80%" height="600" href="reporte.pdf"></embed>          
+    </div>
+    <div class="hide-on-large-only">
+      <embed src="reporte_seccion_comentarios.pdf" width="100%" height="400" href="reporte.pdf"></embed>          
+    </div>
     </div>
     <footer class="page-footer deep-orange">
       <div class="footer-copyright  deep-orange lighten-1">
@@ -216,7 +224,7 @@
     <script type="text/javascript" src="materialize/js/scripts.js"></script>
     <script type="text/javascript" src="materialize/js/pdfobject.min.js"></script>
     <script>
-      PDFObject.embed("reporte_seccion_comentarios.pdf", "#pdfcontainer");
+      //PDFObject.embed("reporte_seccion_comentarios.pdf", "#pdfcontainer");
     </script>
   </body>
 </html>
