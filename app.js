@@ -111,7 +111,9 @@
         comment: comment,
         time: timeStamp()
       });
-    }  
+    }
+    nameInput.value = '';
+    commentsInput.value = '';  
   };
 
   databaseRefComments.on("child_added", snapshot => {
