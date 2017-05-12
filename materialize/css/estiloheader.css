@@ -106,6 +106,9 @@ h4{
   font-family: 'Gochi Hand', cursive;
   font-size: 16pt;
 }
+#encabezadoComentarios{
+  font-family: 'Sofia', cursive;
+}
 #seccionComentarios, #formComments{
  border-radius: 15px;
 }
