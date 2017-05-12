@@ -83,7 +83,7 @@
         }).catch(error => console.error(`Error : ${error.code}: ${error.message}`));      
     }
 
-  form.addEventListener("submit", postComment);
+  //form.addEventListener("submit", postComment);
 
   //Anonimus function timeStamp, par aagregar fecha y hora al comentario
   const timeStamp = () => {
@@ -99,8 +99,7 @@
   };
 
 
-  function postComment(e) {
-    e.preventDefault();
+  function postComment() {
     //obtiene los valores de los elementos con el id name y comment.
     let name = document.getElementById("name").value;
     let comment = document.getElementById("comment").value;
@@ -110,10 +109,10 @@
         name: name,
         comment: comment,
         time: timeStamp()
-      });
-      nameInput.value = '';
-      commentsInput.value = '';  
-    }    
+      });     
+    }
+    nameInput.value = '';
+    commentsInput.value = '';      
   };
 
   databaseRefComments.on("child_added", snapshot => {
