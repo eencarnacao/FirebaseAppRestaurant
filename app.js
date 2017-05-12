@@ -77,7 +77,8 @@
       firebase.auth().signOut()
         .then(() =>{
           console.log('te has deslogeado')
-          document.getElementById("name").value = '';
+          nameInput.value = '';
+          commentsInput.value = '';
           location.reload();
         }).catch(error => console.error(`Error : ${error.code}: ${error.message}`));      
     }
